@@ -1,0 +1,23 @@
+// NERV MODE — dark evangelion terminal
+.app--nerv {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #0f0f1a;
+  --bg-card: rgba(255, 255, 255, 0.03);
+
+  --accent: #c1121f;
+  --accent-secondary: #e85d04;
+  --accent-glow: rgba(193, 18, 31, 0.3);
+
+  --text-primary: #f0f0f0; /* brighter white */
+  --text-secondary: #b0b0b0; /* more visible grey */
+  --text-muted: #707070; /* less dim */
+  --text-artist: #e05555; /* red artist name */
+  --text-title: #ffffff; /* pure white for titles */
+
+  --border-color: rgba(193, 18, 31, 0.2);
+  --border-hover: #c1121f;
+
+  --header-bg: rgba(10, 10, 15, 0.9);
+  --card-shadow: 0 0 20px rgba(193, 18, 31, 0.1);
+  --card-shadow-hover: 0 0 30px rgba(193, 18, 31, 0.3);
+}

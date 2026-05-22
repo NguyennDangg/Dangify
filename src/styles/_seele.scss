@@ -1,0 +1,23 @@
+// SEELE MODE — monolith clean
+.app--seele {
+  --bg-primary: #e8e8e0;
+  --bg-secondary: #d8d8d0;
+  --bg-card: rgba(0, 0, 0, 0.03);
+
+  --accent: #1a3a5c;
+  --accent-secondary: #2a5a8c;
+  --accent-glow: rgba(26, 58, 92, 0.2);
+
+  --text-primary: #0a0a14; /* near black for max contrast */
+  --text-secondary: #2a2a3a; /* dark grey */
+  --text-muted: #666677; /* visible muted */
+  --text-artist: #1a3a5c; /* dark blue for artist */
+  --text-title: #000000; /* pure black for titles */
+
+  --border-color: rgba(26, 58, 92, 0.2);
+  --border-hover: #1a3a5c;
+
+  --header-bg: rgba(232, 232, 224, 0.9);
+  --card-shadow: 0 0 20px rgba(26, 58, 92, 0.1);
+  --card-shadow-hover: 0 0 30px rgba(26, 58, 92, 0.2);
+}

@@ -1,0 +1,39 @@
+.cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--accent);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__label {
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 7px;
+        color: var(--accent);
+        opacity: 0;
+        letter-spacing: 1px;
+        transform: scale(0);
+        pointer-events: none;
+        white-space: nowrap;
+    }
+
+    &__dot {
+        position: fixed;
+        width: 5px;
+        height: 5px;
+        background: var(--accent);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+        top: 0;
+        left: 0;
+    }
+}

@@ -1,0 +1,136 @@
+.player-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 200;
+}
+
+.player {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 600px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 20px 20px 0 0;
+    padding: 30px;
+    z-index: 201;
+    box-shadow: 0 -20px 60px rgba(0, 0, 0, 0.5);
+
+    &__close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: var(--bg-card);
+        border: 1px solid var(--border-color);
+        color: var(--text-primary);
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: border-color 0.2s ease;
+
+        &:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+    }
+
+    &__header {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+        align-items: flex-start;
+    }
+
+    &__image {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 1px solid var(--border-color);
+        flex-shrink: 0;
+    }
+
+    &__info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    &__label {
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 0.65rem;
+        letter-spacing: 4px;
+        color: var(--accent);
+    }
+
+    &__name {
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 1.1rem;
+        color: var(--text-primary);
+        line-height: 1.3;
+    }
+
+    &__artist {
+        font-size: 0.85rem;
+        color: var(--accent);
+    }
+
+    &__album {
+        font-size: 0.75rem;
+        color: var(--text-muted);
+    }
+
+    &__spotify-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 8px;
+        padding: 8px 14px;
+        background: #1db954;
+        color: white;
+        text-decoration: none;
+        border-radius: 20px;
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+        width: fit-content;
+        transition: opacity 0.2s ease;
+
+        &:hover {
+            opacity: 0.85;
+        }
+
+        i {
+            font-size: 1rem;
+        }
+    }
+
+    &__embed {
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid var(--border-color);
+    }
+}
+
+.player__embed {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    cursor: auto;
+
+    iframe {
+        cursor: auto;  // restore default cursor on iframe
+        display: block;
+        pointer-events: auto;
+    }
+}

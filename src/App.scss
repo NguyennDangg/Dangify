@@ -1,0 +1,41 @@
+@use './styles/nerv';
+@use './styles/seele';
+@use './styles/global';
+@use './styles/variables' as v;
+@use './styles/animation';
+
+.app {
+    min-height: 100vh;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background 0.5s ease, color 0.5s ease;
+    cursor: none;
+    
+    iframe{
+        cursor: auto !important;
+    }
+}
+
+.app-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.player__embed {
+    cursor: auto !important;
+    
+    * {
+        cursor: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-content {
+        padding: 0 16px;
+    }
+}

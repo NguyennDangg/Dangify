@@ -1,0 +1,73 @@
+.searchbar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 10px 16px;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 15px var(--accent-glow);
+  }
+
+  &__icon {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    flex-shrink: 0;
+  }
+
+  &__input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    font-family: "Inter", sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0;
+
+    &::placeholder {
+      color: var(--text-muted);
+      font-family: "Inter", sans-serif;
+      letter-spacing: 0;
+    }
+  }
+
+  &__btn {
+    background: var(--accent);
+    border: none;
+    color: white;
+    font-family: "Share Tech Mono", monospace;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+  &__clear {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: none;
+    font-size: 0.85rem;
+    padding: 4px 8px;
+    transition: color 0.2s ease;
+    flex-shrink: 0;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}
