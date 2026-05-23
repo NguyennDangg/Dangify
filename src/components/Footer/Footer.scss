@@ -1,107 +1,61 @@
 .footer {
-  position: fixed;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 24px 16px;
-  font-family: 'Share Tech Mono', monospace;
-  color: var(--text-muted, #8f9bb3);
-  z-index: 100;
-  background: rgba(8, 12, 20, 0.6);
-  backdrop-filter: blur(8px);
-  border-left: 1px solid rgba(0, 229, 255, 0.3);
-  border-radius: 12px 0 0 12px;
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  &__line {
-    width: 1px;
-    height: 40px;
-    background: linear-gradient(to bottom, transparent, var(--accent, #00e5ff), transparent);
-  }
-
-  &__logo {
-    color: var(--accent, #00e5ff);
-    font-size: 0.7rem;
-    letter-spacing: 3px;
-    text-shadow: 0 0 8px var(--accent-glow, rgba(0, 229, 255, 0.5));
-    writing-mode: horizontal-tb;
-    font-weight: 500;
-    white-space: nowrap;
-  }
-
-  &__credits-list {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px 12px;
+    font-family: 'Share Tech Mono', monospace;
+    z-index: 100;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 12px;
+    min-width: 120px;
 
-    a {
-      color: var(--text-muted, #8f9bb3);
-      text-decoration: none;
-      font-size: 0.6rem;
-      letter-spacing: 2px;
-      transition: all 0.2s ease;
-      white-space: nowrap;
-      writing-mode: horizontal-tb;
-      position: relative;
-
-      &:hover {
-        color: var(--accent, #00e5ff);
-        transform: translateX(-3px);
-      }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
     }
 
-    span {
-      color: var(--text-muted, #8f9bb3);
-      font-size: 0.6rem;
-      letter-spacing: 1px;
-      white-space: nowrap;
-      writing-mode: horizontal-tb;
+    &__logo {
+        color: var(--accent);
+        font-size: 0.7rem;
+        letter-spacing: 3px;
+        text-shadow: 0 0 10px var(--accent-glow);
+        white-space: nowrap;
     }
-  }
 
-  &__track {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.6rem;
-    color: var(--text-muted, #8f9bb3);
-    letter-spacing: 1px;
-    white-space: nowrap;
-    writing-mode: horizontal-tb;
-
-    &-icon {
-      color: var(--accent, #00e5ff);
-      font-size: 0.8rem;
-      animation: bounce 2s ease infinite;
+    &__line {
+        width: 1px;
+        height: 40px;
+        background: linear-gradient(to bottom, transparent, var(--accent), transparent);
+        align-self: center;
     }
-  }
 
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-      opacity: 0.6;
+    &__credits-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+
+        a, span {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+            white-space: nowrap;
+            display: block;
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: var(--accent);
+            }
+        }
     }
-    50% {
-      transform: translateY(-3px);
-      opacity: 1;
+
+    @media (max-width: 768px) {
+        display: none;
     }
-  }
-
-  // hover effect — subtle glow on the whole footer
-  &:hover {
-    background: rgba(8, 12, 20, 0.85);
-    border-left-color: rgba(0, 229, 255, 0.6);
-  }
-
-  @media (max-width: 768px) {
-    display: none;
-  }
 }

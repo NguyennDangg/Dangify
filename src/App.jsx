@@ -77,7 +77,7 @@ function App() {
         />
       </div>
 
-      
+      <Footer />
       <Player track={selectedTrack} onClose={() => setSelectedTrack(null)} />
 
       <ThemeToggle mode={mode} setMode={setMode} />
